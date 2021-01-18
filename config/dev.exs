@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :helipad, Helipad.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "zacksiri",
+  password: "",
   database: "helipad_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
