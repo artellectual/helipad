@@ -19,7 +19,7 @@ dependencies:
     - s6
 
 build:
-  destination: '_build/prod/rel/instellar'
+  destination: '_build/prod/rel/helipad'
   command: |
     export MIX_ENV=prod
 
@@ -34,24 +34,24 @@ build:
     mix release
 
 run:
-  name: instellar
+  name: helipad
   process:
     call: 'start'
   command:
     call: 'rpc'
     variations:
-      migrate: Instellar.Release.Tasks.migrate
-      seed: Instellar.Release.Tasks.seed
+      migrate: Helipad.Release.Tasks.migrate
+      seed: Helipad.Release.Tasks.seed
 
 hook:
   post-install: |
-    rc-update add instellar
-    rc-service instellar start
-    rc-service instellar migrate
+    rc-update add helipad
+    rc-service helipad start
+    rc-service helipad migrate
   post-upgrade: |
-    rc-service intellar restart
+    rc-service helipad restart
     sleep 1
-    rc-service instellar migrate
+    rc-service helipad migrate
   post-deinstall: |
-    rc-service instellar stop
-    rc-update del instellar
+    rc-service helipad stop
+    rc-update del helipad
