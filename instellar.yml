@@ -17,7 +17,6 @@ dependencies:
     - bash
     - curl
     - s6
-    - instellar-openrc
 
 build:
   destination: '_build/prod/rel/instellar'
