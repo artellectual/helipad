@@ -10,6 +10,11 @@ defmodule Helipad.MixProject do
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
+      releases: [
+        helipad: [
+          include_executables_for: [:unix]
+        ]
+      ],
       deps: deps()
     ]
   end
