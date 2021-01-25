@@ -16,6 +16,7 @@ dependencies:
   runtime:
     - bash
     - curl
+    - jq
     - s6
 
 build:
