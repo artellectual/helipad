@@ -1,8 +1,8 @@
 import Config
 
-# config :helipad, Helipad.Repo,
-#   # ssl: true,
-#   url: System.fetch_env!("DATABASE_URL")
+config :helipad, Helipad.Repo,
+  # ssl: true,
+  url: System.fetch_env!("DATABASE_URL")
 
 config :helipad, HelipadWeb.Endpoint,
   http: [:inet6, port: 4000],
