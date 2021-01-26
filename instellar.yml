@@ -18,6 +18,7 @@ dependencies:
     - curl
     - jq
     - s6
+    - helipad-openrc
 
 build:
   destination: '_build/prod/rel/helipad'
@@ -46,7 +47,6 @@ run:
 
 hook:
   post-install: |
-    sleep 1
     rc-update add helipad
     rc-service helipad start
     rc-service helipad migrate
