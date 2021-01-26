@@ -40,7 +40,7 @@ run:
   process:
     call: 'start'
   command:
-    call: 'rpc'
+    call: 'eval'
     variations:
       migrate: Helipad.Release.Tasks.migrate
 
