@@ -43,7 +43,6 @@ run:
     call: 'rpc'
     variations:
       migrate: Helipad.Release.Tasks.migrate
-      seed: Helipad.Release.Tasks.seed
 
 hook:
   post-install: |
