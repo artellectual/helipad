@@ -46,9 +46,9 @@ run:
 
 hook:
   post-install: |
-    rc-update add helipad
-    rc-service helipad start
-    rc-service helipad migrate
+    # rc-update add helipad
+    # rc-service helipad start
+    # rc-service helipad migrate
   post-upgrade: |
     rc-service helipad restart
     sleep 1
