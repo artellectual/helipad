@@ -40,7 +40,7 @@ run:
   process:
     call: 'start'
   command:
-    call: 'rpc'
+    call: 'eval'
     variations:
       migrate: Helipad.Release.Tasks.migrate
 
@@ -48,7 +48,6 @@ hook:
   post-install: |
     rc-update add helipad
     rc-service helipad start
-    sleep 1
     rc-service helipad migrate
   post-upgrade: |
     rc-service helipad restart
