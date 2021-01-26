@@ -47,8 +47,8 @@ run:
 hook:
   post-install: |
     rc-update add s6 default
-    rc-service helipad migrate
-    rc-service helipad start
+    # rc-service helipad migrate
+    # rc-service helipad start
   post-upgrade: |
     rc-service helipad migrate
     rc-service helipad restart
