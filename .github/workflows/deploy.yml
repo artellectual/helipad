@@ -1,4 +1,4 @@
-name: 'Depoy'
+name: 'Deploy'
 
 on:
   push:
