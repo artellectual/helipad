@@ -6,11 +6,13 @@ on:
       - master
 
 jobs:
-  build:
+  build_and_deploy:
+    name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v2
+
       - name: 'Pakman'
         uses: upmaru/pakman@develop
         with:
@@ -18,14 +20,17 @@ jobs:
         env:
           ABUILD_PRIVATE_KEY: ${{secrets.ABUILD_PRIVATE_KEY}}
           ABUILD_PUBLIC_KEY: ${{secrets.ABUILD_PUBLIC_KEY}}
+
       - name: 'Build APK'
         uses: upmaru/pakman@develop
         with:
           entrypoint: /var/lib/pakman/bin/build.sh
+
       - name: 'Archive'
         uses: juankaram/archive-action@v1.0.0
         with:
           args: zip -r packages.zip /github/home/packages
+
       - name: 'Create Deployment'
         uses: upmaru/pakman@develop
         with:
