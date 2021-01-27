@@ -13,6 +13,10 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@v2
 
+      - name: Blah
+        run: |
+          ls -la
+
       - name: 'Pakman'
         uses: upmaru/pakman@develop
         with:
