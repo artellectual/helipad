@@ -15,7 +15,6 @@ jobs:
 
       - name: 'Pakman'
         uses: upmaru/pakman@develop
-        working-directory: /github/workspace
         with:
           command: 'bootstrap'
         env:
