@@ -47,15 +47,12 @@ run:
 
 hook:
   post-install: |
-    rc-update add s6-svscan default
-    rc-service s6-svscan start
-    rc-update add helipad
     rc-service helipad migrate
-    # rc-service helipad start
+    rc-service helipad start
 
   post-upgrade: |
     rc-service helipad migrate
-    rc-service helipad restart
+    rc-service helipad start
 
   post-deinstall: |
     rc-service helipad stop
