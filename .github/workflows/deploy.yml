@@ -13,6 +13,11 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@v2.3.4
 
+      - name: 'Test'
+        uses: docker://alpine
+        with:
+          args: sudo chown -R builder:abuild .
+
       - name: 'Pakman'
         uses: upmaru/pakman@develop
         with:
