@@ -17,6 +17,7 @@ dependencies:
     - bash
     - curl
     - jq
+    - ca-certificates
     - s6
     - helipad-openrc
 
