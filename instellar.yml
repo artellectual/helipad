@@ -39,7 +39,7 @@ build:
 run:
   name: helipad
   process:
-    call: 'start'
+    call: 'daemon'
   command:
     call: 'eval'
     variations:
