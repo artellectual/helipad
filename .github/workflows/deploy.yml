@@ -16,7 +16,7 @@ jobs:
       - name: 'Test'
         uses: docker://alpine
         with:
-          args: apk add --no-cache sudo && sudo chown -R builder:abuild .
+          args: mkdir -p /github/workspace/.apk/artellectual/helipad
 
       - name: 'Pakman'
         uses: upmaru/pakman@develop
