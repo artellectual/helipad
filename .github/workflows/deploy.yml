@@ -13,11 +13,6 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@v2.3.4
 
-      # - name: 'Test'
-      #   uses: docker://alpine
-      #   with:
-      #     args: /bin/sh -c "apk add --no-cache sudo && sudo chgrp builder:abuild . && mkdir -p /github/workspace/.apk/artellectual/helipad"
-
       - name: 'Pakman'
         uses: upmaru/pakman@develop
         with:
