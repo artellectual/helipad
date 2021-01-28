@@ -50,7 +50,7 @@ hook:
     rc-update add s6-svscan default
     rc-service s6-svscan start
     rc-update add helipad
-    # rc-service helipad migrate
+    rc-service helipad migrate
     # rc-service helipad start
 
   post-upgrade: |
