@@ -1,7 +1,7 @@
 dependencies:
   build:
     - elixir
-    - erlang-dev
+    - erlang-crypto
     - erlang-syntax-tools
     - erlang-hipe
     - erlang-parsetools
