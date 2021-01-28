@@ -16,9 +16,7 @@ jobs:
       - name: 'Test'
         uses: docker://alpine
         with:
-          args: |
-            apk add --no-cache sudo
-            sudo chown -R builder:abuild .
+          args: apk add --no-cache sudo && sudo chown -R builder:abuild .
 
       - name: 'Pakman'
         uses: upmaru/pakman@develop
