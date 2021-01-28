@@ -6,4 +6,6 @@ config :helipad, Helipad.Repo,
 
 config :helipad, HelipadWeb.Endpoint,
   http: [:inet6, port: 4000],
-  secret_key_base: System.fetch_env!("SECRET_KEY_BASE")
+  secret_key_base: System.fetch_env!("SECRET_KEY_BASE"),
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  server: true
