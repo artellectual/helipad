@@ -50,8 +50,8 @@ hook:
     rc-update add s6 default
     rc-service s6 start
     rc-update add helipad
-    rc-service helipad migrate
-    rc-service helipad start
+    # rc-service helipad migrate
+    # rc-service helipad start
 
   post-upgrade: |
     rc-service helipad migrate
