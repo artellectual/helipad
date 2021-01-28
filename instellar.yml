@@ -38,8 +38,10 @@ build:
 
 run:
   name: helipad
-  process:
-    call: 'daemon'
+  start:
+    call: 'start'
+  stop:
+    call: 'stop'
   command:
     call: 'eval'
     variations:
