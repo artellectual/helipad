@@ -53,7 +53,7 @@ hook:
     rc-service helipad start
 
   post-upgrade: |
-    rc-service helipad migrate
+    # rc-service helipad migrate
     # rc-service helipad restart
 
   post-deinstall: |
